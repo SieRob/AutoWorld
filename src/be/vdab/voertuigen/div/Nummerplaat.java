@@ -19,10 +19,11 @@ public class Nummerplaat implements Comparable<Nummerplaat>, Serializable {
     @Override
     public int compareTo(Nummerplaat p) {
         //1-AAA-[111] -> split on last part and compare this between 2
-        var plaat1 = plaat.substring(plaat.lastIndexOf('-')+1);
-        var plaat2 = p.getPlaat().substring(p.getPlaat().lastIndexOf('-')+1);
+        //var plaat1 = plaat.substring(plaat.lastIndexOf('-')+1);
+        //var plaat2 = p.getPlaat().substring(p.getPlaat().lastIndexOf('-')+1);
 
-        return (Integer.parseInt(plaat1) - Integer.parseInt(plaat2));
+        return p.getPlaat().compareTo(plaat);
+        //return (Integer.parseInt(plaat1) - Integer.parseInt(plaat2));
     }
 
     @Override

@@ -43,10 +43,11 @@ public class Voertuig implements Comparable<Voertuig>, Serializable {
 
     @Override
     public int compareTo(Voertuig nrPlaat) {
-        var plaat1 = nummerplaat.getPlaat().substring(nummerplaat.getPlaat().lastIndexOf('-')+1);
-        var plaat2 = nrPlaat.nummerplaat.getPlaat().substring(nrPlaat.nummerplaat.getPlaat().lastIndexOf('-')+1);
+        //var plaat1 = nummerplaat.getPlaat().substring(nummerplaat.getPlaat().lastIndexOf('-')+1);
+        //var plaat2 = nrPlaat.nummerplaat.getPlaat().substring(nrPlaat.nummerplaat.getPlaat().lastIndexOf('-')+1);
 
-        return (Integer.parseInt(plaat1) - Integer.parseInt(plaat2));
+        return this.nummerplaat.compareTo(nrPlaat.nummerplaat);
+        //return (Integer.parseInt(plaat1) - Integer.parseInt(plaat2));
     }
 
     @Override
