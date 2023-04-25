@@ -17,11 +17,6 @@ public record Volume(int breedte, int hoogte, int diepte, Maat maat) implements 
         return (breedte * diepte * hoogte) * maat.getEenheid();
     }
 
-    //TODO
-    // equals & Hashcode herschrijven
-    // als volume van 2 items hetzelfde is
-    // compare herschrijven
-
     @Override
     public int compareTo(Volume v) {
         return (int)(this.getVolume() - v.getVolume());
